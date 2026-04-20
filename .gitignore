@@ -1,6 +1,10 @@
 .env
+.env.local
+.env.*.local
 *.log
 .DS_Store
 vendor/
 node_modules/
 storage/*.key
+*.pem
+*.key

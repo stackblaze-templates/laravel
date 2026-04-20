@@ -1,0 +1,12 @@
+.env
+.env.*
+.git
+.gitignore
+.github
+node_modules
+vendor
+*.pem
+*.key
+storage/logs
+README.md
+docker-compose.yml
