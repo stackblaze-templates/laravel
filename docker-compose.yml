@@ -4,13 +4,13 @@ services:
     ports:
       - "8000:80"
     environment:
-      - APP_KEY=base64:changeme
+      - APP_KEY=${APP_KEY}
       - DB_CONNECTION=pgsql
       - DB_HOST=db
       - DB_PORT=5432
       - DB_DATABASE=laravel
       - DB_USERNAME=laravel
-      - DB_PASSWORD=laravel
+      - DB_PASSWORD=${DB_PASSWORD}
     depends_on:
       - db
   db:
@@ -18,7 +18,7 @@ services:
     environment:
       POSTGRES_DB: laravel
       POSTGRES_USER: laravel
-      POSTGRES_PASSWORD: laravel
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
     volumes:
       - db_data:/var/lib/postgresql/data
 volumes:
